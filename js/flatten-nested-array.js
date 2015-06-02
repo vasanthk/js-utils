@@ -14,9 +14,9 @@
       result = [];
     }
 
-    for (var i = 0; i < a.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
       if (arr[i].constructor === Array) { // Fastest and most effecient way to check if a variable si an array.
-        flattenArray(arr, result);
+        flattenArray(arr[i], result);
       } else {
         result.push(arr[i]);
       }
