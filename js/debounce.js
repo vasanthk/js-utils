@@ -9,6 +9,7 @@
  * The function will be called after it stops being called for N milliseconds.
  *
  * If 'immediate' parameter is passed, trigger the function on leading edge instead of the trailing.
+ * ie. It is called every time when the event is triggered (if set to true)
  *
  * The debounce function will not allow a callback to be used more than once per given time frame.
  * This is especially important when assigning a callback function to frequently-firing events.
