@@ -8,6 +8,7 @@
  *
  */
 
+// In ES5 -- You can use fn.apply()
 (function () {
   var arr = [1, 2, 3]; // The array values need to passed to params a, b, c.
   function testFn(a, b, c) {
@@ -17,4 +18,15 @@
   // Use apply() to pass array values as parameters.
   testFn.apply(null, arr);
 
+})();
+
+// In ES6 -- You can use the spread operator (..var)
+(function() {
+  var arr = [1, 2, 3]; // The array values need to passed to params a, b, c.
+  function testFn(a, b, c) {
+    // Some logic
+  }
+
+  // Use the spread operator (...) in ES6 to pass array values as parameters.
+  testFn(...arr);
 })();
