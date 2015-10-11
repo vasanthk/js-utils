@@ -15,6 +15,8 @@ window.onload = function () {
   if (!(window.performance && window.performance.timing)) {
     return;
   }
-
-  console.log(window.performance.timing);
+  // Wrap it around a setTimeout to make sure to get it after the load event has ended.
+  setTimeout(function() {
+    console.log(window.performance.timing);
+  }, 0);
 };
