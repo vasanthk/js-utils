@@ -16,7 +16,7 @@
   // Result: ['a', 'b', 'c', 1, 2, 3]
 
 
-  // Using Array prototye push (Effiecient): DOES NOT CREATE A NEW ARRAY
+  // Using Array prototye push (Efficient): DOES NOT CREATE A NEW ARRAY
   var a1 = [1, 2, 3];
   var a2 = [4, 5, 6];
 
