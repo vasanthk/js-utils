@@ -43,7 +43,7 @@
 
 })();
 
-// CASE 3: Compact with ES6 syntax!
+// CASE 3: Compact with ES6 arrow syntax!
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
   var flatten = a => Array.isArray(a) ? [].concat(...a.map(flatten)) : [a];
@@ -51,7 +51,7 @@
   console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
 })();
 
-// CASE 4: Using ES7 async function (yield)
+// CASE 4: Using ES6 yield
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
