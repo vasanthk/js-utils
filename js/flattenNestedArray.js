@@ -6,6 +6,8 @@
  *
  */
 
+//CASE 1
+
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
@@ -25,4 +27,19 @@
   }
 
   console.log(flattenArray(arr)); // Returns [1, 2, 3, 4, 5, 6]
+})();
+
+
+//CASE 2
+
+(function(){
+  
+  var arr = [1, 2, [3, 4, [5, 6]]];
+  
+  function flatten(a) {
+    return Array.isArray(a) ? [].concat.apply([], a.map(flatten)) : [a];
+  }
+  
+  console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
+    
 })();
