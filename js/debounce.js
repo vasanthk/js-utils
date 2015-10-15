@@ -16,6 +16,9 @@
  *
  * @Reference:
  * http://davidwalsh.name/essential-javascript-functions
+ *
+ * @TODO:
+ * Add vanilla JS implementation.
  */
 
 (function () {
