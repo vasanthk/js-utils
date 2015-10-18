@@ -16,9 +16,8 @@
  *
  * @Reference:
  * http://davidwalsh.name/essential-javascript-functions
+ * http://modernjavascript.blogspot.co.uk/2013/08/building-better-debounce.html
  *
- * @TODO:
- * Add vanilla JS implementation.
  */
 
 (function () {
@@ -27,18 +26,20 @@
     return function () {
       var context = this;
       var args = arguments;
-      var later = function () {
+
+      // Clear any timeouts already present.
+      clearTimeout(timeout);
+
+      // Call function with after timeout.
+      timeout = setTimeout(function () {
         timeout = null;
         if (!immediate) {
           func.apply(context, args);
         }
-      };
+      }, wait);
 
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-
-      timeout = setTimeout(later, wait);
-      if (callNow) {
+      // If immediate param is passed on there is no active timeout.
+      if (immediate && !timeout) {
         func.apply(context, args);
       }
     };
