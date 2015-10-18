@@ -3,7 +3,9 @@
  *
  * Throttling is a means by which we can limit the number of times a function can be called in a given period. For instance, we may have a method that should be called no more than 5 times per second.
  *
- * @Reference: http://sampsonblog.com/749/simple-throttle-function
+ * @Reference:
+ * http://sampsonblog.com/749/simple-throttle-function
+ * http://drupalmotion.com/article/debounce-and-throttle-visual-explanation
  */
 
 (function () {
