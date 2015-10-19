@@ -6,6 +6,7 @@
  * @Reference:
  * http://sampsonblog.com/749/simple-throttle-function
  * http://drupalmotion.com/article/debounce-and-throttle-visual-explanation
+ * https://remysharp.com/2010/07/21/throttling-function-calls
  * http://stackoverflow.com/a/27078401/1672655
  */
 
