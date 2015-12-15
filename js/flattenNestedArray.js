@@ -20,7 +20,10 @@
 
     for (var i = 0; i < arr.length; i++) {
       // Fastest and most effecient way to check if a variable is an array.
-      if (arr[i].constructor === Array) {
+      if (Array.isArray(arr[i])) {
+        // Note:
+        // 1. arr[i].constructor === Array also works -- to check if Array.
+        // 2. Constructor check for Array is without string quotes
         flattenArray(arr[i], result);
       } else {
         result.push(arr[i]);
