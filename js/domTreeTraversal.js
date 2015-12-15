@@ -16,8 +16,9 @@
  * http://stackoverflow.com/a/19779708/1672655
  *
  * DOM traversal
- * http://jsfiddle.net/kpq8thxc/2/
- * http://jsfiddle.net/domenlightenment/xw68Q/
+ * Implementation 1: http://jsfiddle.net/kpq8thxc/2/
+ * Implementation 2: http://jsfiddle.net/3u8o9twp/2/
+ * Other: http://jsfiddle.net/domenlightenment/xw68Q/
  */
 
 (function () {
