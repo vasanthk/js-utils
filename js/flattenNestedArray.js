@@ -4,6 +4,8 @@
  * Eg. Input array [1, 2, [3, 4, [5, 6]]]
  * On flattening the array it should output [1, 2, 3, 4, 5, 6]
  *
+ * This array can have multiple types: {}, [], "", undefined, null, 123 -- All valid types inside the array.
+ *
  * Link: http://stackoverflow.com/a/29158887/1672655
  */
 
