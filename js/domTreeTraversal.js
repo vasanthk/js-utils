@@ -12,7 +12,9 @@
  * \        \
  * O        O
  *
- * Link: http://stackoverflow.com/a/19779708/1672655
+ * Link:
+ * http://stackoverflow.com/a/19779708/1672655
+ * http://jsfiddle.net/kpq8thxc/2/
  */
 
 (function () {
