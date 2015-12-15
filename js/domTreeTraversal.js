@@ -16,15 +16,20 @@
  * http://stackoverflow.com/a/19779708/1672655
  *
  * DOM traversal
- * Implementation 1: http://jsfiddle.net/kpq8thxc/2/
- * Implementation 2: http://jsfiddle.net/3u8o9twp/2/
+ * Implementation 1: http://jsfiddle.net/3u8o9twp/2/
+ * Implementation 2: http://jsfiddle.net/kpq8thxc/2/
  * Other: http://jsfiddle.net/domenlightenment/xw68Q/
  */
 
+/**
+ * Implementation 1
+ */
+
 (function () {
-  var givenNode;       // Given node.
-  var givenDomRoot;     // Given DOM tree root.
-  var identicalDomRoot; // Identical DOM tree root.
+  var givenNode = document.getElementById("node1");       // Given node.
+  var givenDomRoot = document.getElementById("dom1");     // Given DOM tree root.
+  var identicalDomRoot = document.getElementById("dom2"); // Identical DOM tree root.
+  var result;
 
   // Given a node and a tree, extract the nodes path.
   function getPath(node, domRoot) {
@@ -59,5 +64,6 @@
   }
 
   // Call it!
-  // getDoppelgangerNode(givenNode, givenDomRoot, identicalDomRoot);
+  result = getDoppelgangerNode(givenNode, givenDomRoot, identicalDomRoot);
+  console.log(result);
 })();
