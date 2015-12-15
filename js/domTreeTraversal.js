@@ -67,3 +67,47 @@
   result = getDoppelgangerNode(givenNode, givenDomRoot, identicalDomRoot);
   console.log(result);
 })();
+
+/**
+ * Implementation 2
+ */
+
+(function () {
+  var tree1 = document.getElementById('dom1'),
+    tree2 = document.getElementById("dom2"),
+    node1 = document.getElementById("node1");
+
+  NodeList.prototype.indexOf = function (item) {
+    return Array.prototype.indexOf.call(this, item);
+  };
+
+  //build a ref tree that contains the parent index
+  function buildTree(childNode, baseNode, tree) {
+    tree = tree || [];
+    if (childNode !== baseNode) {
+      var parentNode = childNode.parentNode;
+      if (parentNode) {
+        var index = parentNode.childNodes.indexOf(childNode);
+        tree.push(index);
+        return buildTree(parentNode, baseNode, tree);
+      }
+    }
+
+    return tree;
+  }
+
+  function getChildNodeFromParentTree(parentNode, parentTree) {
+    var index = parentTree.pop();
+    var childNode = parentNode.childNodes[index];
+
+    if (parentTree.length > 0) {
+      return getChildNodeFromParentTree(childNode, parentTree);
+    } else {
+      return childNode;
+    }
+  }
+
+  var otherNode = getChildNodeFromParentTree(tree2, buildTree(node1, tree1));
+  console.log(otherNode);
+
+})();
