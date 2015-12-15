@@ -14,7 +14,10 @@
  *
  * Link:
  * http://stackoverflow.com/a/19779708/1672655
+ *
+ * DOM traversal
  * http://jsfiddle.net/kpq8thxc/2/
+ * http://jsfiddle.net/domenlightenment/xw68Q/
  */
 
 (function () {
