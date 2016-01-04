@@ -45,7 +45,6 @@
   }
 
   console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
-
 })();
 
 // CASE 3: Compact with ES6 arrow syntax!
@@ -71,4 +70,17 @@
   }
 
   console.log(Array.from(flatten(arr))); // Returns [1, 2, 3, 4, 5, 6]
+})();
+
+// CASE 5: Hacky way using toString()
+(function () {
+  var arr = [1, 2, [3, 4, [5, 6]]];
+
+  function flatten(array) {
+    return array.toString().split(',').map(function (n) {
+      return parseInt(n, 10);
+    });
+  }
+
+  console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
 })();
