@@ -1,1 +1,1 @@
-# JavaScript Exercises
+# JS Utils
