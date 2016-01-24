@@ -19,7 +19,7 @@
     }
 
     for (var i = 0; i < arr.length; i++) {
-      // Fastest and most effecient way to check if a variable is an array.
+      // Fastest and most efficient way to check if a variable is an array.
       if (Array.isArray(arr[i])) {
         // Note:
         // 1. arr[i].constructor === Array also works -- to check if Array.
