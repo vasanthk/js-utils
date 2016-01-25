@@ -2,7 +2,7 @@
  * relativeTimeValue()
  *
  * Display when something was posted, as a relative time value, like “5 days ago”
- * Note: This function retuirns relative time only if less than a month since current date.
+ * Note: This function returns relative time only if less than a month since current date.
  */
 
 (function () {
