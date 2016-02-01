@@ -6,7 +6,9 @@
  *
  * This array can have multiple types: {}, [], "", undefined, null, 123 -- All valid types inside the array.
  *
- * Link: http://stackoverflow.com/a/29158887/1672655
+ * Link:
+ * http://stackoverflow.com/a/29158887/1672655
+ * https://github.com/facebook/fbjs/blob/master/src/core/flattenArray.js
  */
 
 //CASE 1: Simple and fast!
