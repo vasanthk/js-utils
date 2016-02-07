@@ -9,6 +9,7 @@
  * Link:
  * http://stackoverflow.com/a/29158887/1672655
  * https://github.com/facebook/fbjs/blob/master/src/core/flattenArray.js
+ * http://www.jstips.co/en/flattening-multidimensional-arrays-in-javascript/
  */
 
 //CASE 1: Simple and fast!
