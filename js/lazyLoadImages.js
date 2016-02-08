@@ -24,6 +24,8 @@
 // To use this function, we’d pass an image or an image container and the function will return
 // true if the passed element is within the viewport, or false if it is not.
 
+// For a better isElementInViewPort() function check:
+// https://github.com/verlok/lazyload/blob/master/src/lazyload.js#L67
 function isElementInViewPort(el) {
   var rect = el.getBoundingClientRect();
 
