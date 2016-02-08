@@ -3,6 +3,8 @@
  *
  * @Reference:
  * http://developer.telerik.com/featured/lazy-loading-images-on-the-web/
+ * More detailed library:
+ * https://github.com/vasanthk/layzr.js/blob/master/src/layzr.js
  */
 
 
