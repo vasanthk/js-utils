@@ -38,7 +38,7 @@ function isElementInViewPort(el) {
 // We need to get all of the images we want to lazy load and then test them
 // against this function every time a scroll or change to the viewport occurs.
 
-var throttledLazyLoad = debounce(lazyLoadImages);
+var throttledLazyLoad = throttle(lazyLoadImages);
 
 //these handlers will be removed once the images have loaded
 window.addEventListener("DOMContentLoaded", throttledLazyLoad);
