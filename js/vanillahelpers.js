@@ -79,6 +79,11 @@ span.textContent = 'hello';
 // Node.cloneNode(false) - duplicate of the node on which this method was called. (Not its children)
 // appendChild() or insertBefore() method to insert the node to the document (End or beginning)
 
+// To convert an array-like object to an array, use Array.from()
+// ES6
+const foo = document.querySelectorAll('.foo');
+const nodes = Array.from(foo);
+
 
 // On ready
 // Vanilla JS Version
