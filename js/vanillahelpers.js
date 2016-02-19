@@ -111,7 +111,6 @@ domReady(function () {
 
 
 // Event delegation
-// Event delegation
 document.addEventListener("click", delegate(buttonsFilter, buttonHandler));
 
 // Common helper for event delegation.
