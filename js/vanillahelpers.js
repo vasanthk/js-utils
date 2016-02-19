@@ -79,6 +79,18 @@ span.textContent = 'hello';
 
 // Node.cloneNode(false) - duplicate of the node on which this method was called. (Not its children)
 // appendChild() or insertBefore() method to insert the node to the document (End or beginning)
+// Create a new, plain <span> element
+var sp1 = document.createElement("span");
+// Get a reference to the element, before we want to insert the element
+var sp2 = document.getElementById("childElement");
+// Get a reference to the parent element
+var parentDiv = sp2.parentNode;
+// Insert the new element into the DOM before sp2
+parentDiv.insertBefore(sp1, sp2);
+
+// There is no insertAfter method. It can be emulated by combining the insertBefore method with nextSibling.
+parentDiv.insertBefore(sp1, sp2.nextSibling);
+
 
 // To convert an array-like object to an array, use Array.from()
 // ES6
@@ -138,8 +150,10 @@ btn.onclick = function () {
   modal.style.display = 'block';
 };
 
-acc.nextElementSibling.classList.toggle("show");
 
+// Get siblings
+// Example: To toggle open/close in an accordion
+acc.nextElementSibling.classList.toggle("show");
 var otherAccordions = getSiblings(elem, '.panel');
 function getSiblings(elem, matchesSelector) {
   var siblings = [];
