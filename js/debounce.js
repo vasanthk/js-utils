@@ -25,7 +25,7 @@
     var timeout;
     return function () {
       var context = this;
-      var args = arguments;
+      var args = Array.prototype.slice.call(arguments);
 
       // Clear any timeouts already present.
       clearTimeout(timeout);
