@@ -38,10 +38,6 @@ function tag(name, attrs, text) {
   return el;
 }
 
-function $(selector) {
-  return document.querySelectorAll(selector);
-}
-
 // Now create some DOM nodes
 var li = tag('li', {
   'id': 'unique123',
@@ -50,6 +46,11 @@ var li = tag('li', {
 });
 
 var p = tag('p');
+
+// querySelectorAll shorthand
+function $(selector) {
+  return document.querySelectorAll(selector);
+}
 
 // Add text to the paragraph and append it to the list item
 p.textContent = 'Lorem ipsum dolor';
