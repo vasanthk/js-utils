@@ -164,3 +164,17 @@ function getSiblings(elem, matchesSelector) {
   }
   return siblings;
 }
+
+// Get sibling elements
+var getSiblings = function (elem) {
+  var siblings = [];
+  for (var sibling = elem.parentNode.firstElementChild; sibling; sibling = sibling.nextElementSibling) {
+    if (sibling !== elem) {
+      siblings.push(sibling);
+    }
+  }
+  return siblings;
+};
+
+var elem = document.querySelector('#some-element');
+var siblings = getSiblings(elem);
