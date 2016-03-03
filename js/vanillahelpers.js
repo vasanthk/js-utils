@@ -52,6 +52,18 @@ function $(selector) {
   return document.querySelectorAll(selector);
 }
 
+// Get siblings
+// http://stackoverflow.com/a/4379864/1672655
+function getAllSiblings(el) {
+  var result = [];
+  var node = el.parentNode.firstChild;
+  while (node && node.nodeType === 1 && node !== el) {
+    result.push(node);
+    node = node.nextElementSibling || node.nextSibling;
+  }
+  return result;
+}
+
 // Add text to the paragraph and append it to the list item
 p.textContent = 'Lorem ipsum dolor';
 li.appendChild(p);
