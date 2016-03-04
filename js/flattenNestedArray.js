@@ -10,6 +10,9 @@
  * http://stackoverflow.com/a/29158887/1672655
  * https://github.com/facebook/fbjs/blob/master/src/core/flattenArray.js
  * http://www.jstips.co/en/flattening-multidimensional-arrays-in-javascript/
+ *
+ * Iterative Solution works good for large arrays as it prevents the stack from overflowing
+ * http://stackoverflow.com/questions/29991016/iterative-solution-for-flattening-n-th-nested-arrays-in-javascript
  */
 
 //CASE 1: Simple and fast!
