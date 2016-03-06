@@ -18,7 +18,7 @@
  * http://programmers.stackexchange.com/questions/194646/what-methods-are-there-to-avoid-a-stack-overflow-in-a-recursive-algorithm
  */
 
-//CASE 1: Simple and fast!
+//CASE 1: Recursive Solution: Simple and fast!
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
@@ -44,8 +44,39 @@
   console.log(flattenArray(arr)); // Returns [1, 2, 3, 4, 5, 6]
 })();
 
+// CASE 2: Iterative solution - For large arrays it avoids stack overflow caused by recursive calls
+// Link: http://stackoverflow.com/a/29991836/1672655
+(function () {
+  var input = [1, {a: 2}, [3], [[4, 5], 6], 7];
 
-// CASE 2: One liner!
+  function flatten(input) {
+    var placeholder = [input];
+    var lastIndex = [-1];
+    var output = [];
+    var i;
+
+    while (placeholder.length) {
+      input = placeholder.pop();
+      i = lastIndex.pop() + 1;
+
+      for (; i < input.length; i++) {
+        if (Array.isArray(input[i])) {
+          placeholder.push(input);
+          lastIndex.push(i);
+          input = input[i];
+          i = -1;
+        } else {
+          output.push(input[i]);
+        }
+      }
+    }
+    return output;
+  }
+
+  console.log('Flattened array: ', flatten(input));
+})();
+
+// CASE 4: One liner!
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
@@ -56,7 +87,7 @@
   console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
 })();
 
-// CASE 3: Compact with ES6 arrow syntax!
+// CASE 5: Compact with ES6 arrow syntax!
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
   var flatten = a => Array.isArray(a) ? [].concat(...a.map(flatten)) : [a];
@@ -64,7 +95,7 @@
   console.log(flatten(arr)); // Returns [1, 2, 3, 4, 5, 6]
 })();
 
-// CASE 4: Using ES6 yield
+// CASE 6: Using ES6 yield
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
@@ -81,7 +112,7 @@
   console.log(Array.from(flatten(arr))); // Returns [1, 2, 3, 4, 5, 6]
 })();
 
-// CASE 5: Hacky way using toString()
+// CASE 7: Hacky way using toString()
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
 
