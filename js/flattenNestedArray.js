@@ -76,6 +76,20 @@
   console.log('Flattened array: ', flatten(input));
 })();
 
+// CASE 3: Clever iterative solution (Less performant than Case 2)
+// Link: http://stackoverflow.com/a/29991996/1672655
+(function() {
+  var input = [1, {a: 2}, [3], [[4, 5], 6], 7];
+  var output = input;
+
+  while(output.some(Array.isArray)) {
+    output = [].concat.apply([], output);
+    // Array tricks: http://www.2ality.com/2012/07/apply-tricks.html
+  }
+
+  console.log('Flattened array: ', output);
+})();
+
 // CASE 4: One liner!
 (function () {
   var arr = [1, 2, [3, 4, [5, 6]]];
