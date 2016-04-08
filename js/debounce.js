@@ -18,6 +18,7 @@
  * http://davidwalsh.name/essential-javascript-functions
  * http://modernjavascript.blogspot.co.uk/2013/08/building-better-debounce.html
  * http://drupalmotion.com/article/debounce-and-throttle-visual-explanation
+ * https://css-tricks.com/debouncing-throttling-explained-examples/
  */
 
 (function () {
