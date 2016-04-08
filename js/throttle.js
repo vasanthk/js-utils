@@ -8,6 +8,7 @@
  * http://drupalmotion.com/article/debounce-and-throttle-visual-explanation
  * https://remysharp.com/2010/07/21/throttling-function-calls
  * http://stackoverflow.com/a/27078401/1672655
+ * https://css-tricks.com/debouncing-throttling-explained-examples/
  */
 
 (function () {
