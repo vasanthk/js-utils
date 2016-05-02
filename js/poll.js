@@ -64,7 +64,7 @@
       if (fn()) {
         dfd.resolve();
       }
-      // If the condition hasn't been met but the timout hasn't elapsed
+      // If the condition hasn't been met but the timeout hasn't elapsed
       else if (Number(new Date() < endTime)) {
         setTimeout(p, interval);
       }
