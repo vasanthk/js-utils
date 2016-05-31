@@ -2,6 +2,8 @@
  * once()
  *
  * The function ensure that a given function can be called once and only once, thus preventing duplicate initialization
+ * 
+ * Link: http://sinonjs.org/
  */
 
 (function () {
