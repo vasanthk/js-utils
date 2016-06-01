@@ -18,6 +18,14 @@
       return returnValue;
     };
   }
+
+  // Usage
+  var canOnlyFireOnce = once(function () {
+    console.log('Fired!');
+  });
+
+  canOnlyFireOnce();  // Fired!
+  canOnlyFireOnce();  // undefined
 })();
 
 // Implementation 2
