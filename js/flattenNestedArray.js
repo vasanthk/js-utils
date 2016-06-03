@@ -13,6 +13,7 @@
  *
  * Iterative Solution works good for large arrays as it prevents the stack from overflowing
  * http://stackoverflow.com/questions/29991016/iterative-solution-for-flattening-n-th-nested-arrays-in-javascript
+ * http://blog.benoitvallon.com/tips/flattening-arrays-in-javascript/
  *
  * Tail call optimization
  * http://programmers.stackexchange.com/questions/194646/what-methods-are-there-to-avoid-a-stack-overflow-in-a-recursive-algorithm
